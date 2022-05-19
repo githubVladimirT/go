@@ -1,0 +1,47 @@
+app-id: com.github.unrud.RemoteTouchpad
+runtime: org.freedesktop.Platform
+runtime-version: '21.08'
+sdk: org.freedesktop.Sdk
+command: remote-touchpad
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.golang
+finish-args:
+  - --socket=x11
+  - --socket=fallback-x11
+  - --share=network
+modules:
+  - name: remote-touchpad
+    sources:
+      # Vendor dependencies: go mod vendor -v
+      - type: git
+        url: https://github.com/godbus/dbus
+        tag: v5.0.6
+        commit: daa017464e266380cdeb4e6f9613eba9182b59a3
+        dest: vendor/github.com/godbus/dbus/v5
+      - type: git
+        url: https://github.com/skip2/go-qrcode
+        commit: da1b6568686e89143e94f980a98bc2dbd5537f13
+        dest: vendor/github.com/skip2/go-qrcode
+      - type: git
+        url: https://github.com/golang/net
+        commit: cd36cc0744dd695657988f15f08446dc81e16efc
+        dest: vendor/golang.org/x/net
+      - type: file
+        path: modules.txt
+        dest: vendor
+      - type: git
+        path: ..
+        branch: master
+    buildsystem: simple
+    build-commands:
+      - . /usr/lib/sdk/golang/enable.sh; go build -tags portal,x11
+      - install -Dm0755 -t /app/bin remote-touchpad
+      - install -Dm0755 -t /app/bin desktop/remote-touchpad-wait-on-error
+      - install -Dm0644 -t /app/share/metainfo desktop/com.github.unrud.RemoteTouchpad.metainfo.xml
+      - install -Dm0644 -t /app/share/applications desktop/com.github.unrud.RemoteTouchpad.desktop
+      - install -Dm0644 -t /app/share/icons/hicolor/scalable/apps desktop/com.github.unrud.RemoteTouchpad.svg
+      - |
+        for res in 16 32 48 64 128 256 512; do
+          rsvg-convert --height "${res}" --keep-aspect-ratio --format png --output com.github.unrud.RemoteTouchpad.png desktop/com.github.unrud.RemoteTouchpad.svg || exit 1
+          install -Dm0644 -t "/app/share/icons/hicolor/${res}x${res}/apps" com.github.unrud.RemoteTouchpad.png || exit 1
+        done

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.github.unrud.RemoteTouchpad</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <name>Remote Touchpad</name>
+  <summary>Control mouse and keyboard from a smartphone</summary>
+  <description>
+    <p>
+      Control mouse and keyboard from the webbrowser of a smartphone (or any other device with a touchscreen).
+      To take control open the displayed URL or scan the QR code.
+    </p>
+    <p>
+      Supports Flatpak&apos;s RemoteDesktop portal (for Wayland), Windows and X11.
+    </p>
+  </description>
+  <launchable type="desktop-id">com.github.unrud.RemoteTouchpad.desktop</launchable>
+  <url type="bugtracker">https://github.com/Unrud/remote-touchpad/issues</url>
+  <url type="homepage">https://github.com/Unrud/remote-touchpad</url>
+  <developer_name>Unrud</developer_name>
+  <releases>
+    <release version="1.2.0" date="2022-02-26">
+      <description>
+        <ul>
+          <li>Add command-line options for move and scroll speed</li>
+          <li>Add hardware mouse support</li>
+          <li>Limit update rate</li>
+          <li>Windows: Reverse vertical scroll direction</li>
+          <li>Show error message if compiled without controller</li>
+          <li>Don't show disabled controllers in "unsupported platform" error message</li>
+          <li>Switch from go-bindata-assetfs to go:embed</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.1.0" date="2022-01-28">
+      <description>
+        <ul>
+          <li>Add more shortcut keys (Arrows, Delete, Enter, …)</li>
+          <li>Add basic support for physical keyboard</li>
+          <li>Allow fullscreen on keys page</li>
+          <li>Enable touchpad on keys page</li>
+          <li>Retain keyboard text when reloading website</li>
+          <li>Improve compatibility with old browsers</li>
+          <li>Write URL and QR code to stdout</li>
+          <li>Ignore unparseable IP</li>
+          <li>Remove trailing new line from QR code</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.0.5" date="2022-01-07">
+      <description>
+        <ul>
+          <li>Use relative URL for websocket</li>
+          <li>Update dependencies</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.0.4" date="2021-11-06">
+      <description>
+        <ul>
+          <li>Disable browser touch gestures</li>
+          <li>Update dependencies</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.0.3" date="2021-09-18">
+      <description>
+        <ul>
+          <li>Update dependencies</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.0.2" date="2021-06-05">
+      <description>
+        <ul>
+          <li>New logo</li>
+          <li>Update dependencies</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.0.1" date="2020-09-13">
+      <description>
+        <ul>
+          <li>Update dependencies</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.0.0" date="2020-08-26">
+      <description>
+        <ul>
+          <li>Add super and browser back and forward keys</li>
+          <li>Reduce minimum size of textarea</li>
+          <li>Small UI improvements</li>
+          <li>Remove obsolete command line arguments</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.0.18" date="2020-05-16">
+      <description>
+        <ul>
+          <li>Fix error messages for TLS certificate and private key files</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.0.17" date="2020-02-20">
+      <description>
+        <ul>
+          <li>Minor HTML improvements</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.0.16" date="2020-02-17">
+      <description>
+        <ul>
+          <li>Fix textarea on WebKit</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.0.15" date="2019-11-03">
+      <description>
+        <ul>
+          <li>Prefer IPv4 addresses</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.0.14" date="2019-10-28">
+      <description>
+        <ul>
+          <li>Handle quirks of browser touch events</li>
+          <li>Hide navigation bar in fullscreen mode</li>
+          <li>Set terminal title</li>
+          <li>Flatpak: Update dependencies</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.0.13" date="2019-05-04">
+      <description>
+        <ul>
+          <li>Flatpak: Update dependencies</li>
+          <li>AppStream: Fix release descriptions</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.0.12" date="2018-12-08">
+      <description>
+        <ul>
+          <li>fix the browser Forward button</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.0.11" date="2018-10-20">
+      <description>
+        <ul>
+          <li>rename plugin to backend</li>
+          <li>update flatpak</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.0.10" date="2018-10-01">
+      <description>
+        <ul>
+          <li>avoid race condition when typing on X11</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.0.9" date="2018-09-29">
+      <description>
+        <ul>
+          <li>add multimedia keys</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.0.8" date="2018-09-07">
+      <description>
+        <ul>
+          <li>enable pointer movement after timeout</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.0.7" date="2018-09-04">
+      <description>
+        <ul>
+          <li>use custom font for icons</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.0.6" date="2018-08-23">
+      <description>
+        <ul>
+          <li>use colors in terminal for QR qode</li>
+          <li>remove -invert command line argument</li>
+          <li>mitigate race condition when typing text on X11</li>
+          <li>improve KeySyms used for text on X11 and Flatpak&apos;s RemoteDesktop portal</li>
+          <li>normalize line endings</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.0.5" date="2018-07-31">
+      <description>
+        <ul>
+          <li>remove mouse polling interval</li>
+          <li>add support for &quot;pixel-perfect&quot; scrolling</li>
+          <li>add experimental support for Flatpak&apos;s RemoteDesktop portal</li>
+          <li>X11 plugin: check session type</li>
+          <li>improve error logging</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.0.4" date="2018-07-22">
+      <description>
+        <ul>
+          <li>add setting for mouse polling interval</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.0.3" date="2018-06-26">
+      <description>
+        <ul>
+          <li>fix websocket with https</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.0.2" date="2018-06-25">
+      <description>
+        <ul>
+          <li>add reload button to disconnected-page</li>
+        </ul>
+      </description>
+    </release>
+    <release version="0.0.1" date="2018-06-23">
+      <description>
+        <p>initial release</p>
+      </description>
+    </release>
+  </releases>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/Unrud/remote-touchpad/v1.2.0/screenshots/1.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/Unrud/remote-touchpad/v1.2.0/screenshots/2.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/Unrud/remote-touchpad/v1.2.0/screenshots/3.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/Unrud/remote-touchpad/v1.2.0/screenshots/4.png</image>
+    </screenshot>
+  </screenshots>
+  <content_rating type="oars-1.1"/>
+</component>

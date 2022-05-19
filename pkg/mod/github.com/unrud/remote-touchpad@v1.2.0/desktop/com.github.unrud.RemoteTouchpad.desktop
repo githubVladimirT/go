@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Remote Touchpad
+Comment=Control mouse and keyboard from a smartphone
+Terminal=true
+Exec=remote-touchpad-wait-on-error
+Icon=com.github.unrud.RemoteTouchpad
+Categories=Network;RemoteAccess;ConsoleOnly;

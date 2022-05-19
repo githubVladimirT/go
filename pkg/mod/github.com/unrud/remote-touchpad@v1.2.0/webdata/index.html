@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+<script src="fn.js"></script>
+<script src="sha256.js"></script>
+<title>Remote Touchpad</title>
+<link href="main.css" media="screen" rel="stylesheet">
+<link href="icon.png" type="image/png" rel="icon">
+
+<div id="opening" class="scene">
+    <noscript><p>JavaScript is required!</p></noscript>
+    <p>Connecting…</p>
+</div>
+<div id="closed" class="scene hidden">
+    <p>Disconnected</p>
+    <button id="reloadbutton">↻</button>
+</div>
+<div id="pad" class="scene touch key fullscreen hidden">
+    <p class="touch">Touchpad</p>
+    <button id="keysbutton">≡</button>
+    <button id="fullscreenbutton">⤢</button>
+    <button id="keyboardbutton">⌨</button>
+</div>
+<div id="keyboard" class="scene hidden">
+    <textarea cols=1 rows=1></textarea>
+    <div class="buttons">
+        <button id="keyboardkeysbutton">≡</button>
+        <button id="sendbutton">➣</button>
+    </div>
+</div>
+<div id="keys" class="scene touch key fullscreen hidden">
+    <div class="scene touch">
+        <div class="buttons">
+            <button id="browserbackbutton">⭠</button>
+            <button id="superbutton">🪟</button>
+            <button id="browserforwardbutton">⭢</button>
+        </div>
+        <div class="buttons">
+            <button id="prevtrackbutton">⏮</button>
+            <button id="playpausebutton">⏯</button>
+            <button id="nexttrackbutton">⏭</button>
+        </div>
+        <div class="buttons">
+            <button id="volumedownbutton">🔉</button>
+            <button id="volumemutebutton">🔇</button>
+            <button id="volumeupbutton">🔊</button>
+        </div>
+    </div>
+    <div class="scene touch">
+        <div class="buttons">
+            <button id="backspacebutton">⌫</button>
+            <button id="returnbutton">⮠</button>
+            <button id="deletebutton">⌦</button>
+        </div>
+        <div class="buttons">
+            <button id="homebutton">⭰</button>
+            <button id="upbutton">↑</button>
+            <button id="endbutton">⭲</button>
+        </div>
+        <div class="buttons">
+            <button id="leftbutton">←</button>
+            <button id="downbutton">↓</button>
+            <button id="rightbutton">→</button>
+        </div>
+    </div>
+    <button id="switchbutton">⮂</button>
+    <button class="backbutton">⯇</button>
+</div>
+<div id="mouse" class="scene key fullscreen hidden">
+    <p>Mouse</p>
+</div>

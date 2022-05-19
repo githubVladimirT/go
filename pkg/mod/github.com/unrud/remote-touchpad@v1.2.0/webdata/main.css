@@ -1,0 +1,210 @@
+@font-face {
+    font-family: "icon";
+    src: url("icon.woff") format("woff");
+}
+
+.hidden {
+    display: none !important;
+}
+
+html {
+    font-family: sans-serif;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #404040;
+    color: white;
+    background-image: url(tex.png);
+    touch-action: none;
+}
+
+html,
+body,
+.scene {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.scene {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+    font-size: 2rem;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+button {
+    padding: 0;
+    background-color: transparent;
+    border: 1px solid black;
+    height: 1.5em;
+    width: 2em;
+    border-radius: 2px;
+    font-size: 2rem;
+    color: white;
+    font-family: "icon";
+    overflow: hidden;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+#opening,
+#closed {
+    padding: 0 0.5rem;
+}
+
+#opening noscript p,
+#closed p {
+    margin-bottom: 1em;
+}
+
+#reloadbutton {
+    font-size: 4rem;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+#pad > p,
+#mouse > p {
+    color: gray;
+    text-shadow:
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
+    opacity: 0.08;
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+@media (max-width: 32rem) {
+    #pad > p,
+    #mouse > p {
+        font-size: 13vw;
+    }
+}
+
+#pad > button, #keys > button {
+    position: absolute;
+    max-width: 50%;
+    max-height: 50%;
+}
+
+#fullscreenbutton {
+    left: 0;
+    bottom: 0;
+    border-bottom: none;
+    border-left: none;
+}
+
+#keyboardbutton {
+    right: 0;
+    bottom: 0;
+    border-right: none;
+    border-bottom: none;
+}
+
+#keysbutton {
+    left: 0;
+    top: 0;
+    border-top: none;
+    border-left: none;
+}
+
+textarea {
+    flex-grow: 1;
+    border: none;
+    resize: none;
+    font-size: 2rem;
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0 0.5rem;
+}
+
+#keyboard .buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+#keyboard .buttons > button {
+    border-bottom: none;
+    border-left: none;
+}
+
+#keyboard .buttons > button:last-of-type {
+    flex-grow: 1;
+    border-right: none;
+}
+
+@media (min-aspect-ratio: 4/3) {
+    #keyboard {
+        flex-direction: row;
+    }
+
+    #keyboard .buttons {
+        flex-direction: column;
+    }
+
+    #keyboard .buttons > button {
+        border-top: none;
+        border-right: none;
+        border-left: 1px solid black;
+    }
+
+    #keyboard .buttons > button:last-of-type {
+        border-top: 1px solid black;
+    }
+}
+
+#keys .scene {
+    padding: 0.5rem;
+    padding-bottom: 0;
+    justify-content: flex-end;
+}
+
+#switchbutton {
+    right: 0;
+    top: 0;
+    border-top: none;
+    border-right: none;
+}
+
+#keys .backbutton {
+    left: 0;
+    top: 0;
+    border-top: none;
+    border-left: none;
+}
+
+#keys .buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    flex-shrink: 1;
+    height: 6rem;
+    min-height: 0;
+}
+
+#keys .buttons > button:not(:last-of-type) {
+    border-right: none;
+}
+
+#keys .buttons > button {
+    flex-shrink: 1;
+    height: 100%;
+    width: 8rem;
+    min-width: 0;
+}
